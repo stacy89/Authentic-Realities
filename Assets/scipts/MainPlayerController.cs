@@ -5,8 +5,12 @@ using System.Collections;
 
 public class MainPlayerController : MonoBehaviour {
 	public float speed;
+	public GameObject cube1;
 	public GameObject cube2;
 	public GameObject cube3;
+	public GameObject cube4;
+	public GameObject cube5;
+	public GameObject cube6;
 
 	private Rigidbody rb;
 	private int count;
@@ -31,21 +35,45 @@ public class MainPlayerController : MonoBehaviour {
 		
 	void OnTriggerEnter(Collider other) 
 		{
+
+
+
 		if (other.gameObject.CompareTag ("Starting Stats")) 
+		{	
+			cube1.SetActive (true);
+		}
+
+		if (other.gameObject.CompareTag ("Marriage")) 
 		{	
 			cube2.SetActive (true);
 		}
 
-		if (other.gameObject.CompareTag ("Event1")) 
+		if (other.gameObject.CompareTag ("Housing")) 
 		{	
 			cube3.SetActive (true);
 		}
 
-		if (other.gameObject.CompareTag ("End Game")) 
+		if (other.gameObject.CompareTag ("Vacation")) 
 		{	
-			gameManager.GameOver ();
-			//gameManager.GameOver();
+			cube4.SetActive (true);
 		}
+
+		if (other.gameObject.CompareTag ("Retirement Party")) 
+		{	
+			cube5.SetActive (true);
+		}
+
+		if (other.gameObject.CompareTag ("Retirement")) 
+		{	
+			cube6.SetActive (true);
+		}
+
+//		if (other.gameObject.CompareTag ("")) 
+//		{	
+//			gameManager.GameOver ();
+//			Debug.Log ("hey");
+//			//gameManager.GameOver();
+//		}
 
 	}
 
