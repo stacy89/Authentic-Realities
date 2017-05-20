@@ -5,7 +5,8 @@ using System.Collections;
 
 public class MainPlayerController : MonoBehaviour {
 	public float speed;
-	public GameObject cube;
+	public GameObject cube2;
+	public GameObject cube3;
 
 	private Rigidbody rb;
 	private int count;
@@ -29,10 +30,15 @@ public class MainPlayerController : MonoBehaviour {
 	}
 		
 	void OnTriggerEnter(Collider other) 
-	{
-		if (other.gameObject.CompareTag ("Trigger Box")) 
 		{
-			cube.SetActive (true);
+		if (other.gameObject.CompareTag ("Starting Stats")) 
+		{	
+			cube2.SetActive (true);
+		}
+
+		if (other.gameObject.CompareTag ("Event1")) 
+		{	
+			cube3.SetActive (true);
 		}
 
 		if (other.gameObject.CompareTag ("End Game")) 
@@ -41,6 +47,13 @@ public class MainPlayerController : MonoBehaviour {
 			//gameManager.GameOver();
 		}
 
+	}
+
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.CompareTag ("Starting Stats")) {	
+			cube2.SetActive (false);
+		}
 	}
 }
 
