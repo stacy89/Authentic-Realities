@@ -80,8 +80,30 @@ public class MainPlayerController : MonoBehaviour {
 	void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject.CompareTag ("Starting Stats")) {	
+			cube1.SetActive (false);
+		}
+
+		if (other.gameObject.CompareTag ("Marriage")) {	
 			cube2.SetActive (false);
 		}
+
+		if (other.gameObject.CompareTag ("Housing")) {	
+			cube3.SetActive (false);
+		}
+
+		if (other.gameObject.CompareTag ("Vacation")) {	
+			cube4.SetActive (false);
+		}
+
+		if (other.gameObject.CompareTag ("Retirement Party")) {	
+			cube5.SetActive (false);
+		}
+
+		if (other.gameObject.CompareTag ("Retirement")) {	
+			cube6.SetActive (false);
+		}
+
+	
 	}
 }
 
