@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class player_controller : MonoBehaviour {
+public class MiniPlayerController : MonoBehaviour {
 	public float speed;
 	public Text countText;
 	public Text gameOverText;
