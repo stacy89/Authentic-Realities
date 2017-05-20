@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI
+﻿//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using UnityEngine.UI
 
-public Text resetText; 
-private bool restart; 
+//public Text resetText; 
+//private bool restart; 
 
-void Start ()
-{
+//void Start ()
+//{
 	
-}
+//}
