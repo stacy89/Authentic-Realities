@@ -68,12 +68,7 @@ public class MainPlayerController : MonoBehaviour {
 			cube6.SetActive (true);
 		}
 
-//		if (other.gameObject.CompareTag ("")) 
-//		{	
-//			gameManager.GameOver ();
-//			Debug.Log ("hey");
-//			//gameManager.GameOver();
-//		}
+
 
 	}
 
@@ -103,7 +98,14 @@ public class MainPlayerController : MonoBehaviour {
 			cube6.SetActive (false);
 		}
 
+		if (other.gameObject.CompareTag ("End Game")) {	
+			gameManager.GameOver ();
+			Debug.Log ("hey");
+			//gameManager.GameOver();
+		}
+
 	
 	}
+		
 }
 
