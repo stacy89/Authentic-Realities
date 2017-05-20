@@ -10,6 +10,8 @@ public class MainPlayerController : MonoBehaviour {
 	private Rigidbody rb;
 	private int count;
 
+	public GameManager gameManager;
+
 	void Start()
 	{ 
 		rb = GetComponent<Rigidbody>();
@@ -31,6 +33,12 @@ public class MainPlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Trigger Box")) 
 		{
 			cube.SetActive (true);
+		}
+
+		if (other.gameObject.CompareTag ("End Game")) 
+		{	
+			gameManager.GameOver ();
+			//gameManager.GameOver();
 		}
 
 	}
