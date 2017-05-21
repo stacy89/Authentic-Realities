@@ -11,6 +11,7 @@ public class MainPlayerController : MonoBehaviour {
 	public GameObject cube4;
 	public GameObject cube5;
 	public GameObject cube6;
+	public Vector3 offset;
 
 	private Rigidbody rb;
 	private int count;
@@ -31,6 +32,11 @@ public class MainPlayerController : MonoBehaviour {
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		
 		rb.AddForce (movement * speed);
+	}
+
+	void LateUpdate()
+	{
+		cube2.transform.position = (rb.transform.position) + offset;
 	}
 		
 	void OnTriggerEnter(Collider other) 
