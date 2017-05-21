@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f84ea61a68c36446bac294ab1b0619d0
+timeCreated: 1495301961
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - cube: {fileID: 1330658747716868, guid: 323bfe6bb243646a987e724eb06d5f69, type: 2}
+  - cube2: {fileID: 1578777518216022, guid: e6cb4d856e34948c8b5a6118a228b01a, type: 2}
+  - gameManager: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
