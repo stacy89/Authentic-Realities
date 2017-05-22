@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class MainPlayerController : MonoBehaviour {
 	public float speed;
 	public GameObject cube1;
@@ -16,6 +18,10 @@ public class MainPlayerController : MonoBehaviour {
 	public Vector3 offset;
 	public Vector3 highttext;
 	public Vector3 midtext;
+//	public AudioSource textsound;
+//	public float Volume;
+
+
 
 
 	private Rigidbody rb;
@@ -63,18 +69,27 @@ public class MainPlayerController : MonoBehaviour {
 			cube1.SetActive (true);
 		}
 
-		if (other.gameObject.CompareTag ("Marriage")) 
+		if (other.gameObject.CompareTag ("newjobtexttrigger")) 
+			
 		{	
+			
+			AudioSource audio = GetComponent<AudioSource> ();
+			audio.Play ();
 			newjobtext.SetActive (true);
+
 		}
 
 		if (other.gameObject.CompareTag ("Housing")) 
 		{	
+			AudioSource audio = GetComponent<AudioSource> ();
+			audio.Play ();
 			newhousetext.SetActive (true);
 		}
 
 		if (other.gameObject.CompareTag ("Vacation")) 
 		{	
+			AudioSource audio = GetComponent<AudioSource> ();
+			audio.Play ();
 			vacationtext1.SetActive (true);
 			vacationtext2.SetActive (true);
 		}
@@ -83,18 +98,25 @@ public class MainPlayerController : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("Retirement Party")) 
 		{	
+			AudioSource audio = GetComponent<AudioSource> ();
+			audio.Play ();
 			retirement1text.SetActive (true);
 
 		}
 
 		if (other.gameObject.CompareTag ("Retirement2")) 
+			
 		{	
+			AudioSource audio = GetComponent<AudioSource> ();
+			audio.Play ();
 			retirement2text.SetActive (true);
 
 		}
 
 		if (other.gameObject.CompareTag ("Retirement3")) 
 		{	
+			AudioSource audio = GetComponent<AudioSource> ();
+			audio.Play ();
 			retirement3text.SetActive (true);
 
 		}
@@ -115,7 +137,7 @@ public class MainPlayerController : MonoBehaviour {
 			cube1.SetActive (false);
 		}
 
-		if (other.gameObject.CompareTag ("Marriage")) {	
+		if (other.gameObject.CompareTag ("newjobtexttrigger")) {	
 			newjobtext.SetActive (false);
 		}
 
