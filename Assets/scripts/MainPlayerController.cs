@@ -89,6 +89,19 @@ public class MainPlayerController : MonoBehaviour {
 
 		}
 
+		if (other.gameObject.CompareTag ("Retirement2")) 
+		{	
+			retirement2text.SetActive (true);
+
+		}
+
+		if (other.gameObject.CompareTag ("Retirement3")) 
+		{	
+			retirement3text.SetActive (true);
+
+		}
+
+
 //		if (other.gameObject.CompareTag ("Retirement")) 
 //		{	
 ////			retirement2text.SetActive (true);
@@ -117,10 +130,8 @@ public class MainPlayerController : MonoBehaviour {
 			vacationtext2.SetActive (false);
 		}
 
-		if (other.gameObject.CompareTag ("Retirement Party")) {	
+		if (other.gameObject.CompareTag ("Retirement3")) {	
 			retirement1text.SetActive (false);
-
-
 			retirement2text.SetActive (false);
 			retirement3text.SetActive (false);
 		}
