@@ -84,8 +84,6 @@ public class MainPlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Retirement Party")) 
 		{	
 			retirement1text.SetActive (true);
-			retirement2text.SetActive (true);
-			retirement3text.SetActive (true);
 
 		}
 
