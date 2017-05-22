@@ -7,7 +7,7 @@ using System.Collections;
 
 public class MainPlayerController : MonoBehaviour {
 	public float speed;
-	public GameObject cube1;
+
 	public GameObject newjobtext;
 	public GameObject newhousetext;
 	public GameObject vacationtext1;
@@ -15,9 +15,12 @@ public class MainPlayerController : MonoBehaviour {
 	public GameObject retirement1text;
 	public GameObject retirement2text;
 	public GameObject retirement3text;
+	public GameObject StartCard;
 	public Vector3 offset;
 	public Vector3 highttext;
 	public Vector3 midtext;
+	public Vector3 startCardOffset;
+
 //	public AudioSource textsound;
 //	public float Volume;
 
@@ -54,6 +57,8 @@ public class MainPlayerController : MonoBehaviour {
 		retirement1text.transform.position = (rb.transform.position) + highttext;
 		retirement2text.transform.position = (rb.transform.position) + midtext;
 		retirement3text.transform.position = (rb.transform.position) + offset;
+		StartCard.transform.position = (rb.transform.position) + startCardOffset;
+
 
 
 	}
@@ -66,7 +71,7 @@ public class MainPlayerController : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("Starting Stats")) 
 		{	
-			cube1.SetActive (true);
+			StartCard.SetActive (true);
 		}
 
 		if (other.gameObject.CompareTag ("newjobtexttrigger")) 
@@ -134,7 +139,7 @@ public class MainPlayerController : MonoBehaviour {
 	void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject.CompareTag ("Starting Stats")) {	
-			cube1.SetActive (false);
+			StartCard.SetActive (false);
 		}
 
 		if (other.gameObject.CompareTag ("newjobtexttrigger")) {	
