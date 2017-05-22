@@ -6,11 +6,11 @@ using System.Collections;
 public class MainPlayerController : MonoBehaviour {
 	public float speed;
 	public GameObject cube1;
-	public GameObject cube2;
-	public GameObject cube3;
-	public GameObject cube4;
-	public GameObject cube5;
-	public GameObject cube6;
+	public GameObject newjobtext;
+	public GameObject newhousetext;
+	public GameObject vacationtext1;
+	public GameObject retirement1text;
+	public GameObject retirement2text;
 	public Vector3 offset;
 
 	private Rigidbody rb;
@@ -36,7 +36,11 @@ public class MainPlayerController : MonoBehaviour {
 
 	void LateUpdate()
 	{
-		cube2.transform.position = (rb.transform.position) + offset;
+		newjobtext.transform.position = (rb.transform.position) + offset;
+		newhousetext.transform.position = (rb.transform.position) + offset;
+		vacationtext1.transform.position = (rb.transform.position) + offset;
+		retirement1text.transform.position = (rb.transform.position) + offset;
+		retirement2text.transform.position = (rb.transform.position) + offset;
 	}
 		
 	void OnTriggerEnter(Collider other) 
@@ -51,27 +55,27 @@ public class MainPlayerController : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("Marriage")) 
 		{	
-			cube2.SetActive (true);
+			newjobtext.SetActive (true);
 		}
 
 		if (other.gameObject.CompareTag ("Housing")) 
 		{	
-			cube3.SetActive (true);
+			newhousetext.SetActive (true);
 		}
 
 		if (other.gameObject.CompareTag ("Vacation")) 
 		{	
-			cube4.SetActive (true);
+			vacationtext1.SetActive (true);
 		}
 
 		if (other.gameObject.CompareTag ("Retirement Party")) 
 		{	
-			cube5.SetActive (true);
+			retirement1text.SetActive (true);
 		}
 
 		if (other.gameObject.CompareTag ("Retirement")) 
 		{	
-			cube6.SetActive (true);
+			retirement2text.SetActive (true);
 		}
 
 
@@ -85,23 +89,23 @@ public class MainPlayerController : MonoBehaviour {
 		}
 
 		if (other.gameObject.CompareTag ("Marriage")) {	
-			cube2.SetActive (false);
+			newjobtext.SetActive (false);
 		}
 
 		if (other.gameObject.CompareTag ("Housing")) {	
-			cube3.SetActive (false);
+			newhousetext.SetActive (false);
 		}
 
 		if (other.gameObject.CompareTag ("Vacation")) {	
-			cube4.SetActive (false);
+			vacationtext1.SetActive (false);
 		}
 
 		if (other.gameObject.CompareTag ("Retirement Party")) {	
-			cube5.SetActive (false);
+			retirement1text.SetActive (false);
 		}
 
 		if (other.gameObject.CompareTag ("Retirement")) {	
-			cube6.SetActive (false);
+			retirement2text.SetActive (false);
 		}
 
 		if (other.gameObject.CompareTag ("End Game")) {	
