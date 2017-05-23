@@ -29,6 +29,7 @@ public class MainPlayerController : MonoBehaviour {
 	public AudioSource canafford;
 	public AudioSource vacation;
 	public AudioSource cantretire;
+	public AudioSource checkboxsound;
 
 
 //	public AudioSource textsound;
@@ -93,12 +94,14 @@ public class MainPlayerController : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("checkbox2")) 
 		{	
+			checkboxsound.Play();
 			CheckBox1.SetActive (false);
 			CheckBox2.SetActive (true);
 		}
 
 		if (other.gameObject.CompareTag ("checkbox3")) 
 		{	
+			checkboxsound.Play();
 			CheckBox2.SetActive (false);
 			CheckBox3.SetActive (true);
 		}
