@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 	{	
 		gameOver = false;
 		reset = false;
-		resetText.text = "";
+		//resetText.text = "";
 	}
 
 	void Update () 

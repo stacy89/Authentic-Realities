@@ -25,6 +25,7 @@ public class MainPlayerController : MonoBehaviour {
 	public Vector3 startCardOffset;
 	public Vector3 CheckBox1Offset;
 
+    public AudioSource cantafford;
 
 //	public AudioSource textsound;
 //	public float Volume;
@@ -198,6 +199,19 @@ public class MainPlayerController : MonoBehaviour {
 
 	
 	}
-		
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Buy House"))
+        {
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                cantafford.Play();
+                Debug.Log("Cant Afford this House");
+            }
+
+        }
+    }
 }
 
