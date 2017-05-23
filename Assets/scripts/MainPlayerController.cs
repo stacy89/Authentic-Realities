@@ -26,6 +26,7 @@ public class MainPlayerController : MonoBehaviour {
 	public Vector3 CheckBox1Offset;
 
     public AudioSource cantafford;
+	public AudioSource canafford;
 
 //	public AudioSource textsound;
 //	public float Volume;
@@ -212,6 +213,17 @@ public class MainPlayerController : MonoBehaviour {
             }
 
         }
+
+		if (other.gameObject.CompareTag("Bought House"))
+		{
+
+			if (Input.GetKeyUp(KeyCode.Space))
+			{
+				canafford.Play();
+				Debug.Log("Can Afford this House");
+			}
+
+		}
     }
 }
 
