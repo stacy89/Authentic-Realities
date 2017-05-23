@@ -16,10 +16,15 @@ public class MainPlayerController : MonoBehaviour {
 	public GameObject retirement2text;
 	public GameObject retirement3text;
 	public GameObject StartCard;
+	public GameObject CheckBox1;
+	public GameObject CheckBox2;
+	public GameObject CheckBox3;
 	public Vector3 offset;
 	public Vector3 highttext;
 	public Vector3 midtext;
 	public Vector3 startCardOffset;
+	public Vector3 CheckBox1Offset;
+
 
 //	public AudioSource textsound;
 //	public float Volume;
@@ -58,6 +63,10 @@ public class MainPlayerController : MonoBehaviour {
 		retirement2text.transform.position = (rb.transform.position) + midtext;
 		retirement3text.transform.position = (rb.transform.position) + offset;
 		StartCard.transform.position = (rb.transform.position) + startCardOffset;
+		CheckBox1.transform.position = (rb.transform.position) + CheckBox1Offset;
+		CheckBox2.transform.position = (rb.transform.position) + CheckBox1Offset;
+		CheckBox3.transform.position = (rb.transform.position) + CheckBox1Offset;
+
 
 
 
@@ -73,6 +82,24 @@ public class MainPlayerController : MonoBehaviour {
 		{	
 			StartCard.SetActive (true);
 		}
+
+		if (other.gameObject.CompareTag ("checkbox1")) 
+		{	
+			CheckBox1.SetActive (true);
+		}
+
+		if (other.gameObject.CompareTag ("checkbox2")) 
+		{	
+			CheckBox1.SetActive (false);
+			CheckBox2.SetActive (true);
+		}
+
+		if (other.gameObject.CompareTag ("checkbox3")) 
+		{	
+			CheckBox2.SetActive (false);
+			CheckBox3.SetActive (true);
+		}
+
 
 		if (other.gameObject.CompareTag ("newjobtexttrigger")) 
 			
