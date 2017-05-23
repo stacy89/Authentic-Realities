@@ -27,6 +27,9 @@ public class MainPlayerController : MonoBehaviour {
 
     public AudioSource cantafford;
 	public AudioSource canafford;
+	public AudioSource vacation;
+	public AudioSource cantretire;
+
 
 //	public AudioSource textsound;
 //	public float Volume;
@@ -221,6 +224,28 @@ public class MainPlayerController : MonoBehaviour {
 			{
 				canafford.Play();
 				Debug.Log("Can Afford this House");
+			}
+
+		}
+
+		if (other.gameObject.CompareTag("Your Vacation"))
+		{
+
+			if (Input.GetKeyUp(KeyCode.Space))
+			{
+				vacation.Play();
+				Debug.Log("Vacation");
+			}
+
+		}
+
+		if (other.gameObject.CompareTag("Cant Retire"))
+		{
+
+			if (Input.GetKeyUp(KeyCode.Space))
+			{
+				cantretire.Play();
+	
 			}
 
 		}
