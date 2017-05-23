@@ -19,6 +19,7 @@ public class MainPlayerController : MonoBehaviour {
 	public GameObject CheckBox1;
 	public GameObject CheckBox2;
 	public GameObject CheckBox3;
+	public GameObject Movie;
 	public Vector3 offset;
 	public Vector3 highttext;
 	public Vector3 midtext;
@@ -159,7 +160,10 @@ public class MainPlayerController : MonoBehaviour {
 
 		}
 
-
+		if (other.gameObject.CompareTag ("Movie")) 
+		{	
+			Movie.SetActive (true);
+		}
 //		if (other.gameObject.CompareTag ("Retirement")) 
 //		{	
 ////			retirement2text.SetActive (true);
@@ -200,7 +204,6 @@ public class MainPlayerController : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("End Game")) {	
 			gameManager.GameOver ();
-			Debug.Log ("hey");
 			//gameManager.GameOver();
 		}
 
@@ -215,7 +218,6 @@ public class MainPlayerController : MonoBehaviour {
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 cantafford.Play();
-                Debug.Log("Cant Afford this House");
             }
 
         }
@@ -226,7 +228,6 @@ public class MainPlayerController : MonoBehaviour {
 			if (Input.GetKeyUp(KeyCode.Space))
 			{
 				canafford.Play();
-				Debug.Log("Can Afford this House");
 			}
 
 		}
@@ -237,7 +238,6 @@ public class MainPlayerController : MonoBehaviour {
 			if (Input.GetKeyUp(KeyCode.Space))
 			{
 				vacation.Play();
-				Debug.Log("Vacation");
 			}
 
 		}
