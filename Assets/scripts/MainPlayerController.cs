@@ -70,9 +70,9 @@ public class MainPlayerController : MonoBehaviour {
 		retirement2text.transform.position = (rb.transform.position) + midtext;
 		retirement3text.transform.position = (rb.transform.position) + offset;
 		StartCard.transform.position = (rb.transform.position) + startCardOffset;
-		CheckBox1.transform.position = (rb.transform.position) + CheckBox1Offset;
-		CheckBox2.transform.position = (rb.transform.position) + CheckBox1Offset;
-		CheckBox3.transform.position = (rb.transform.position) + CheckBox1Offset;
+		//CheckBox1.transform.position = (rb.transform.position) + CheckBox1Offset;
+		//CheckBox2.transform.position = (rb.transform.position) + CheckBox1Offset;
+		//CheckBox3.transform.position = (rb.transform.position) + CheckBox1Offset;
 
 
 	}
