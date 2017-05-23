@@ -68,8 +68,6 @@ public class MainPlayerController : MonoBehaviour {
 		CheckBox3.transform.position = (rb.transform.position) + CheckBox1Offset;
 
 
-
-
 	}
 		
 
