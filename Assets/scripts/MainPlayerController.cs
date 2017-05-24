@@ -141,9 +141,13 @@ public class MainPlayerController : MonoBehaviour {
 			vacationtext2.SetActive (true);
 		}
 
+        if (other.gameObject.CompareTag("vacationexit"))
+        {
+            CheckBox2.SetActive(true);
+        }
 
 
-		if (other.gameObject.CompareTag ("Retirement Party")) 
+        if (other.gameObject.CompareTag ("Retirement Party")) 
 		{	
 			AudioSource audio = GetComponent<AudioSource> ();
 			audio.Play ();
@@ -167,6 +171,7 @@ public class MainPlayerController : MonoBehaviour {
 			retirement3text.SetActive (true);
 
 		}
+   
 
 		if (other.gameObject.CompareTag ("Movie")) 
 		{	
@@ -199,9 +204,15 @@ public class MainPlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Vacation")) {	
 			vacationtext1.SetActive (false);
 			vacationtext2.SetActive (false);
+            CheckBox2.SetActive (false); 
 		}
 
-		if (other.gameObject.CompareTag ("Retirement3")) {	
+        if (other.gameObject.CompareTag("vacation2enter"))
+        {
+            CheckBox2.SetActive(false);
+        }
+
+        if (other.gameObject.CompareTag ("Retirement3")) {	
 			retirement1text.SetActive (false);
 			retirement2text.SetActive (false);
 			retirement3text.SetActive (false);
