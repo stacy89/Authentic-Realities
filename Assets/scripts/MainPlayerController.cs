@@ -20,7 +20,11 @@ public class MainPlayerController : MonoBehaviour {
 	public GameObject CheckBox2;
 	public GameObject CheckBox3;
 	public GameObject Movie;
-	public Vector3 offset;
+    public GameObject houseparticles1;
+    public GameObject houseparticles2;
+    public GameObject strobelight;
+
+    public Vector3 offset;
 	public Vector3 highttext;
 	public Vector3 midtext;
 	public Vector3 startCardOffset;
@@ -170,6 +174,9 @@ public class MainPlayerController : MonoBehaviour {
 		}
 	    if (other.gameObject.CompareTag ("House Party")) 
 	    {
+            houseparticles1.SetActive(true);
+            houseparticles2.SetActive(true);
+            strobelight.SetActive(true);
             housePartyVoices.Play();
             housePartyMusic.Play();
 	    }
@@ -211,6 +218,9 @@ public class MainPlayerController : MonoBehaviour {
 
         if (other.gameObject.CompareTag("House Party"))
         {
+            houseparticles1.SetActive(false);
+            houseparticles2.SetActive(false);
+            strobelight.SetActive(false);
             housePartyVoices.Stop();
             housePartyMusic.Stop();
         }
