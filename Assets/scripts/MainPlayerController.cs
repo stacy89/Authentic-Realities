@@ -31,15 +31,19 @@ public class MainPlayerController : MonoBehaviour {
 	public AudioSource vacation;
 	public AudioSource cantretire;
 	public AudioSource checkboxsound;
-
-
-//	public AudioSource textsound;
-//	public float Volume;
+    public AudioSource housePartyMusic;
+    public AudioSource housePartyVoices;
 
 
 
 
-	private Rigidbody rb;
+    //	public AudioSource textsound;
+    //	public float Volume;
+
+
+
+
+    private Rigidbody rb;
 	private int count;
 
 	public GameManager gameManager;
@@ -164,13 +168,11 @@ public class MainPlayerController : MonoBehaviour {
 		{	
 			Movie.SetActive (true);
 		}
-//		if (other.gameObject.CompareTag ("Retirement")) 
-//		{	
-////			retirement2text.SetActive (true);
-//		}
-//
-
-
+	    if (other.gameObject.CompareTag ("House Party")) 
+	    {
+            housePartyVoices.Play();
+            housePartyMusic.Play();
+	    }
 	}
 
 	void OnTriggerExit(Collider other)
@@ -207,8 +209,13 @@ public class MainPlayerController : MonoBehaviour {
 			//gameManager.GameOver();
 		}
 
-	
-	}
+        if (other.gameObject.CompareTag("House Party"))
+        {
+            housePartyVoices.Stop();
+            housePartyMusic.Stop();
+        }
+
+    }
 
     private void OnTriggerStay(Collider other)
     {
