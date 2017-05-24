@@ -23,6 +23,8 @@ public class MainPlayerController : MonoBehaviour {
     public GameObject houseparticles1;
     public GameObject houseparticles2;
     public GameObject strobelight;
+    public GameObject retire;
+    public GameObject BuyHousePrompt;
 
     public Vector3 offset;
 	public Vector3 highttext;
@@ -177,7 +179,18 @@ public class MainPlayerController : MonoBehaviour {
 		{	
 			Movie.SetActive (true);
 		}
-	    if (other.gameObject.CompareTag ("House Party")) 
+
+        if (other.gameObject.CompareTag("Cant Retire"))
+        {
+            retire.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("Buy House"))
+        {
+            BuyHousePrompt.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag ("House Party")) 
 	    {
             houseparticles1.SetActive(true);
             houseparticles2.SetActive(true);
