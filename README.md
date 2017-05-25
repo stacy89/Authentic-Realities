@@ -14,6 +14,4 @@
 * Scripts are in C#
 
 ## Process Video
-<iframe width="854" height="480" scr="https://youtu.be/f0HfhdsAcfI"> </iframe>
-[![Basic functionality video](https://img.youtube.com/vi/f0HfhdsAcfI/maxresdefault.jpg)
 [![Basic functionality video](https://youtu.be/f0HfhdsAcfI)
