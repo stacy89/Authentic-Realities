@@ -13,6 +13,9 @@
 * Oculus
 * Scripts are in C#
 
+## Video of Project
+[![Final Video](https://img.youtube.com/vi/FfyguQqvizM/0.jpg)](https://www.youtube.com/watch?v=FfyguQqvizM)
+
 
 ## Process Videos
 ### Basic Track is set up with ball as a player object
@@ -22,6 +25,9 @@
 
 ### The environment is placed and the trigger boxes are developed 
 [![Process Video2](https://img.youtube.com/vi/ssxeGMM4z6g/0.jpg)](https://www.youtube.com/watch?v=ssxeGMM4z6g)
+
+
+
 
 
 
