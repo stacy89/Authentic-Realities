@@ -15,3 +15,4 @@
 
 ## Process Video
 [![Basic functionality video](https://youtu.be/f0HfhdsAcfI)
+[![Alt text](https://img.youtube.com/vi/f0HfhdsAcfI/0.jpg)](https://www.youtube.com/watch?v=f0HfhdsAcfI)
