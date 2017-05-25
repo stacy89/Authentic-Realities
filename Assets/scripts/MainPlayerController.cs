@@ -176,7 +176,8 @@ public class MainPlayerController : MonoBehaviour {
    
 
 		if (other.gameObject.CompareTag ("Movie")) 
-		{	
+		{
+            CheckBox3.SetActive(false);
 			Movie.SetActive (true);
 		}
 
