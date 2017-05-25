@@ -1,0 +1,27 @@
+#body {
+  margin: auto;
+  background-color: #84CAF3;
+}
+
+.tag_line{
+  padding-top: 10%;
+  padding-left: 5%;
+}
+
+.tag_line img {
+  width: 300px;
+}
+
+#cityscape{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 30%;
+}
+
+.video {
+  padding-right: 5%;
+  position: absolute;
+  top: 15%;
+  right: 0px;
+}
