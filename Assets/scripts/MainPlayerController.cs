@@ -198,7 +198,18 @@ public class MainPlayerController : MonoBehaviour {
             housePartyVoices.Play();
             housePartyMusic.Play();
 	    }
-	}
+
+        if (other.gameObject.CompareTag("Bought House"))
+        {
+             canafford.Play();
+
+        }
+
+        if (other.gameObject.CompareTag("Your Vacation"))
+        {
+                vacation.Play();
+        }
+    }
 
 	void OnTriggerExit(Collider other)
 	{
@@ -262,26 +273,6 @@ public class MainPlayerController : MonoBehaviour {
             }
 
         }
-
-		if (other.gameObject.CompareTag("Bought House"))
-		{
-
-			if (Input.GetKeyUp(KeyCode.Space))
-			{
-				canafford.Play();
-			}
-
-		}
-
-		if (other.gameObject.CompareTag("Your Vacation"))
-		{
-
-			if (Input.GetKeyUp(KeyCode.Space))
-			{
-				vacation.Play();
-			}
-
-		}
 
 		if (other.gameObject.CompareTag("Cant Retire"))
 		{
