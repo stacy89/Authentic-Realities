@@ -40,6 +40,8 @@ public class MainPlayerController : MonoBehaviour {
     public AudioSource housePartyMusic;
     public AudioSource housePartyVoices;
 
+    public BetterController controller;
+
 
 
 
@@ -60,7 +62,7 @@ public class MainPlayerController : MonoBehaviour {
 
 	}
 
-	void FixedUpdate ()
+    void FixedUpdate ()
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal"); 
 		float moveVertical = Input.GetAxis ("Vertical");
@@ -263,12 +265,12 @@ public class MainPlayerController : MonoBehaviour {
 
     }
 
-    private void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Buy House"))
         {
 
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (controller.device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
             {
                 cantafford.Play();
             }
@@ -278,7 +280,7 @@ public class MainPlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag("Cant Retire"))
 		{
 
-			if (Input.GetKeyUp(KeyCode.Space))
+			if (controller.device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
 			{
 				cantretire.Play();
 	
