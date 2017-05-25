@@ -15,11 +15,12 @@
 
 
 ## Process Videos
-## Basic Track is set up with ball as a player object
+### Basic Track is set up with ball as a player object
 [![Process Video1](https://img.youtube.com/vi/f0HfhdsAcfI/0.jpg)](https://www.youtube.com/watch?v=f0HfhdsAcfI)
 
 
-## The environment is placed and the trigger boxes are developed 
+
+### The environment is placed and the trigger boxes are developed 
 [![Process Video2](https://img.youtube.com/vi/ssxeGMM4z6g/0.jpg)](https://www.youtube.com/watch?v=ssxeGMM4z6g)
 
 
